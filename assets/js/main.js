@@ -21,7 +21,6 @@ function toggleSearch() {
     searchInput.classList.toggle('invisible');
     searchInput.classList.toggle('translate-y-5');
 }
-
 // Function to hide search if clicked outside
 window.addEventListener('click', function (e) {
     if (!searchInput.contains(e.target) && !e.target.closest('button')) {

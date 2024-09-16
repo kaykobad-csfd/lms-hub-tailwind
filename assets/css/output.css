@@ -13283,6 +13283,19 @@ html{
   outline-offset: 2px;
 }
 
+.page-loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 999999;
+  height: 100vh;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 241 254 / var(--tw-bg-opacity));
+  transition-duration: 300ms;
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -13542,10 +13555,6 @@ html{
 
 .z-50{
   z-index: 50;
-}
-
-.z-\[999999\]{
-  z-index: 999999;
 }
 
 .z-\[99999\]{
@@ -15604,10 +15613,6 @@ input::-webkit-outer-spin-button,
   padding-top: 0px;
 }
 
-.last\:hidden:last-child{
-  display: none;
-}
-
 .last\:\*\:hidden > *:last-child{
   display: none;
 }
@@ -16249,10 +16254,6 @@ input::-webkit-outer-spin-button,
   .sm\:\*\:py-6 > *{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .sm\:last\:block:last-child{
-    display: block;
   }
 
   .sm\:last\:\*\:block > *:last-child{
@@ -17096,17 +17097,6 @@ input::-webkit-outer-spin-button,
   .xl\:\*\:py-3 > *{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1480px){
-  .\31 280-1480\:hidden{
-    display: none;
-  }
-
-  .\31 280-1480\:translate-x-4{
-    --tw-translate-x: 1rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 

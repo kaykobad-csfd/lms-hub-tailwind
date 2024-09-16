@@ -15,29 +15,27 @@
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
 </head>
 <body onload="loadWindow()">
-    <div id="loader" class="fixed z-[999999] flex-center w-full h-screen bg-primary duration-300">
-        <img src="assets/images/loader.gif" alt="lms-hub" class="brightness-[50] select-none">
+    <div id="loader" class="page-loader">
+        <img src="assets/images/loader.gif" alt="lms-hub" class="select-none">
     </div>
     <div id="content" class="hidden animate-fade">
         <!-- Top Notify -->
         <div class="bg-primary py-3">
             <div class="container sm:flex-between-center flex-center">
-                <div class="text-sm">
-                    <ul class="flex items-center divide-x sm:last:*:block last:*:hidden text-white">
-                        <li>
-                            <a href="mailto:example@gmail.com" class="flex gap-2.5 lg:px-6 px-2.5 pl-0">
-                                <img src="assets/images/icons/mail.svg" alt="mail">
-                                example@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/0000000000" class="flex gap-2.5 lg:px-6 px-2.5 pr-0">
-                                <img src="assets/images/icons/phone.svg" alt="mail">
-                                Call: (123) 456 - 7892
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="flex items-center divide-x sm:last:*:block last:*:hidden text-white text-sm">
+                    <li>
+                        <a href="mailto:example@gmail.com" class="flex gap-2.5 lg:px-6 px-2.5 pl-0">
+                            <img src="assets/images/icons/mail.svg" alt="mail">
+                            example@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/0000000000" class="flex gap-2.5 lg:px-6 px-2.5 pr-0">
+                            <img src="assets/images/icons/phone.svg" alt="mail">
+                            Call: (123) 456 - 7892
+                        </a>
+                    </li>
+                </ul>
                 <div class="text-white sm:flex hidden items-center leading-none">
                     <select class="bg-transparent focus:outline-none *:text-heading cursor-pointer select-none text-sm">
                         <option value="english">English</option>

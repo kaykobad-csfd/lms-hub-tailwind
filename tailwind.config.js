@@ -16,7 +16,6 @@ module.exports = {
       extend: {
         screens:{
           "2xl": "1320px",
-          '1280-1480': { 'min': '1280px', 'max': '1480px' },
         },
         colors:{
           primary: {

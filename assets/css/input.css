@@ -173,6 +173,10 @@
         @apply border border-gray-200 placeholder:text-gray-100 focus:outline-none focus:border-secondary-100 rounded-lg py-3 px-5 w-full mt-2;
     }
 
+    .page-loader{
+        @apply fixed z-[999999] flex-center w-full h-screen bg-[#EFF1FE] duration-300
+    }
+
 }
 @layer utilities{
     .fixed_top {

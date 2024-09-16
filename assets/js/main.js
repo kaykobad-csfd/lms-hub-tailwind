@@ -8,7 +8,6 @@
     document.getElementById('loader').style.display = 'none';
     document.getElementById('content').style.display = 'block';
   }
-
   /* toggle search */
   var searchIcon = document.getElementById('searchIcon');
   var closeIcon = document.getElementById('closeIcon');

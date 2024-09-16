@@ -12568,12 +12568,12 @@ html{
 
 .list-tick-circle::before{
   margin-top: 0.25rem;
-  --tw-content: url('../../assets/images/icons/tick_white.png');
+  --tw-content: url('../../assets/images/icons/tick_white.webp');
   content: var(--tw-content);
 }
 
 .list-tick-circle.list-primary::before{
-  --tw-content: url('../../assets/images/icons/tick_primary.png');
+  --tw-content: url('../../assets/images/icons/tick_primary.webp');
   content: var(--tw-content);
 }
 
@@ -14011,6 +14011,10 @@ html{
   width: 3rem;
 }
 
+.w-14{
+  width: 3.5rem;
+}
+
 .w-2\/4{
   width: 50%;
 }
@@ -14069,6 +14073,10 @@ html{
 
 .w-\[250px\]{
   width: 250px;
+}
+
+.w-\[300px\]{
+  width: 300px;
 }
 
 .w-full{
@@ -14173,6 +14181,34 @@ html{
 
 .animate-fade{
   animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes shakeX{
+  0%, 100%{
+    transform: translateX(0px);
+  }
+
+  50%{
+    transform: translateX(-16px);
+  }
+}
+
+.animate-shakeX{
+  animation: shakeX 6s ease-in-out infinite;
+}
+
+@keyframes shakeY{
+  0%, 100%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-16px);
+  }
+}
+
+.animate-shakeY{
+  animation: shakeY 6s ease-in-out infinite;
 }
 
 .cursor-pointer{
@@ -14678,19 +14714,19 @@ html{
 }
 
 .bg-blog_quote{
-  background-image: url(../images/blog/blog-detail/quote-bg.png);
+  background-image: url(../images/blog/blog-detail/quote-bg.webp);
 }
 
 .bg-counter_bg{
-  background-image: url(../images/hero/counter/counter-bg.png);
+  background-image: url(../images/hero/counter/counter-bg.webp);
 }
 
 .bg-course_detail_hero{
-  background-image: url(../images/hero/course-detail-hero-bg.png);
+  background-image: url(../images/hero/course-detail-hero-bg.webp);
 }
 
 .bg-cta_section{
-  background-image: url(../images/cta/cta-bg.png);
+  background-image: url(../images/cta/cta-bg.webp);
 }
 
 .bg-grow{
@@ -14698,7 +14734,7 @@ html{
 }
 
 .bg-inner_hero{
-  background-image: url(../images/hero/inner-hero-bg.png);
+  background-image: url(../images/hero/inner-hero-bg.webp);
 }
 
 .bg-instractor_gradint{
@@ -14706,27 +14742,27 @@ html{
 }
 
 .bg-join_section{
-  background-image: url(../images/join-us/join-bg.png);
+  background-image: url(../images/join-us/join-bg.webp);
 }
 
 .bg-join_user_bg{
-  background-image: url(../images/join-us/user-bg.png);
+  background-image: url(../images/join-us/user-bg.webp);
 }
 
 .bg-main_hero{
-  background-image: url(../images/hero/main-bg.png);
+  background-image: url(../images/hero/main-bg.webp);
 }
 
 .bg-offer_elemt{
-  background-image: url(../images/top-courses/offter-interset.png);
+  background-image: url(../images/top-courses/offter-interset.webp);
 }
 
 .bg-org_card_bg{
-  background-image: url(../images/organization/organize-bg.png);
+  background-image: url(../images/organization/organize-bg.webp);
 }
 
 .bg-org_detail_bg{
-  background-image: url(../images/organization/organize-detail-bg.png);
+  background-image: url(../images/organization/organize-detail-bg.webp);
 }
 
 .bg-100\%{
@@ -14742,8 +14778,8 @@ html{
      object-fit: cover;
 }
 
-.p-1{
-  padding: 0.25rem;
+.p-2{
+  padding: 0.5rem;
 }
 
 .p-2\.5{
@@ -14930,10 +14966,6 @@ html{
 
 .pb-3\.5{
   padding-bottom: 0.875rem;
-}
-
-.pb-36{
-  padding-bottom: 9rem;
 }
 
 .pb-5{
@@ -15360,11 +15392,6 @@ html{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.brightness-\[50\]{
-  --tw-brightness: brightness(50);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter{
@@ -17097,6 +17124,17 @@ input::-webkit-outer-spin-button,
   .xl\:\*\:py-3 > *{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1480px){
+  .\31 280-1480\:hidden{
+    display: none;
+  }
+
+  .\31 280-1480\:translate-x-4{
+    --tw-translate-x: 1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 

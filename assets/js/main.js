@@ -1,78 +1,85 @@
-// page loader
-var myLoader;
-function loadWindow(){
- myLoader = setTimeout(showPage, 1500)
-}
+  // page loader
+  var myLoader;
+  function loadWindow(){
+    myLoader = setTimeout(showPage, 1500)
+  }
 
 function showPage(){
   document.getElementById('loader').style.display = 'none';
   document.getElementById('content').style.display = 'block';
 }
 
-
 /* toggle search */
-  var searchIcon = document.getElementById('searchIcon');
-  var closeIcon = document.getElementById('closeIcon');
-  var searchInput = document.getElementById('searchInput');
-  
-  function toggleSearch() {
+var searchIcon = document.getElementById('searchIcon');
+var closeIcon = document.getElementById('closeIcon');
+var searchInput = document.getElementById('searchInput');
+
+function toggleSearch() {
+    // Toggle the search visibility
     searchIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
     searchInput.classList.toggle('opacity-0');
     searchInput.classList.toggle('invisible');
     searchInput.classList.toggle('translate-y-5');
+}
+
+// Function to hide search if clicked outside
+window.addEventListener('click', function (e) {
+    if (!searchInput.contains(e.target) && !e.target.closest('button')) {
+        if (!searchInput.classList.contains('opacity-0')) {
+            toggleSearch(); // Hide the search input if it's open
+        }
+    }
+});
+
+  // course grid
+  const gridBtn = document.querySelector('.grid-btn');
+  const colBtn = document.querySelector('.col-btn');
+  const courseItems = document.querySelectorAll('.course-item');
+  const courseGridThumb = document.querySelectorAll('.course-grid-thumb');
+  const courseGridThumbImg = document.querySelectorAll('.course-grid-thumb-img');
+
+  // instructor grid
+  const instructorVOne = document.querySelectorAll('.instructorVOne');
+  const instructorVTwo = document.querySelectorAll('.instructorVTwo');
+
+  function toggleView(isGridView) {
+      gridBtn.classList.toggle('!bg-primary', isGridView);
+      gridBtn.classList.toggle('!text-white', isGridView);
+      colBtn.classList.toggle('!bg-primary', !isGridView);
+      colBtn.classList.toggle('!text-white', !isGridView);
+
+      courseItems.forEach(item => {
+          item.classList.toggle('!col-span-full', !isGridView);
+          item.classList.toggle('lg:!p-6', !isGridView);
+          item.classList.toggle('lg:flex', !isGridView);
+      });
+      courseGridThumb.forEach(thumb => {
+          thumb.classList.toggle('lg:rounded-2xl', !isGridView);
+      });
+      courseGridThumbImg.forEach(img => {
+          img.classList.toggle('lg:h-full', !isGridView);
+          img.classList.toggle('lg:object-cover', !isGridView);
+      });
+
+      // instructor grid
+      instructorVOne.forEach(item => {
+          item.classList.toggle('grid', isGridView);
+          item.classList.toggle('hidden', !isGridView);
+      });
+      instructorVTwo.forEach(item => {
+          item.classList.toggle('hidden', isGridView);
+          item.classList.toggle('grid', !isGridView);
+      });
   }
-// course grid
-const gridBtn = document.querySelector('.grid-btn');
-const colBtn = document.querySelector('.col-btn');
-const courseItems = document.querySelectorAll('.course-item');
-const courseGridThumb = document.querySelectorAll('.course-grid-thumb');
-const courseGridThumbImg = document.querySelectorAll('.course-grid-thumb-img');
 
-// instructor grid
-const instructorVOne = document.querySelectorAll('.instructorVOne');
-const instructorVTwo = document.querySelectorAll('.instructorVTwo');
+  function toggleGrid() {
+      toggleView(true);
+  }
+  function toggleCol() {
+      toggleView(false);
+  }
 
-function toggleView(isGridView) {
-    gridBtn.classList.toggle('!bg-primary', isGridView);
-    gridBtn.classList.toggle('!text-white', isGridView);
-    colBtn.classList.toggle('!bg-primary', !isGridView);
-    colBtn.classList.toggle('!text-white', !isGridView);
-
-    courseItems.forEach(item => {
-        item.classList.toggle('!col-span-full', !isGridView);
-        item.classList.toggle('lg:!p-6', !isGridView);
-        item.classList.toggle('lg:flex', !isGridView);
-    });
-    courseGridThumb.forEach(thumb => {
-        thumb.classList.toggle('lg:rounded-2xl', !isGridView);
-    });
-    courseGridThumbImg.forEach(img => {
-        img.classList.toggle('lg:h-full', !isGridView);
-        img.classList.toggle('lg:object-cover', !isGridView);
-    });
-
-    // instructor grid
-    instructorVOne.forEach(item => {
-        item.classList.toggle('grid', isGridView);
-        item.classList.toggle('hidden', !isGridView);
-    });
-    instructorVTwo.forEach(item => {
-        item.classList.toggle('hidden', isGridView);
-        item.classList.toggle('grid', !isGridView);
-    });
-}
-
-function toggleGrid() {
-    toggleView(true);
-}
-
-function toggleCol() {
-    toggleView(false);
-}
-
-
-  
   /* toggle Drawer */
   var mobileNav = document.getElementById('mobile-nav');
   var mobileNavOverlay = document.getElementById('mobile-nav-overlay');
@@ -116,9 +123,8 @@ function toggleCol() {
     }
   });
   
-
-// FAQ Accordion
-document.querySelectorAll('.accordion').forEach(accordion => {
+  // FAQ Accordion
+  document.querySelectorAll('.accordion').forEach(accordion => {
     accordion.addEventListener('click', function () {
       const accordionPanel = this.nextElementSibling;
       this.classList.toggle('active');
@@ -212,37 +218,83 @@ document.querySelectorAll('.accordion').forEach(accordion => {
     
   });
 
-  // Video Play
-document.addEventListener('DOMContentLoaded', () => {
-  const videoWrapper = document.querySelector('.video-wrapper');
-  const videoContainer = videoWrapper.querySelector('.video-container');
+  // Counter Function
+  (function counter() {
+    const counters = document.querySelectorAll(".counter-value");
+  
+    if (counters.length) {
+      counters.forEach((counter) => {
+        const valueText = counter.getAttribute("data-value");
+        const value = parseFloat(valueText); // Parse the value as a float
+        const duration = parseInt(counter.getAttribute("data-duration")) || 2000; // Default duration is 2000ms
+        const delay = parseInt(counter.getAttribute("data-delay")) || 0; // Default delay is 0ms
+        const startTime = Date.now() + delay;
+  
+        const updateCount = () => {
+          const elapsed = Date.now() - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const count = progress * value;
+  
+          counter.innerText = formatNumber(count);
+          
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = formatNumber(value); // Ensure final value is displayed
+          }
+        };
+  
+        function formatNumber(num) {
+          if (num >= 1000000) {
+            return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M'; // Format as millions
+          } else if (num >= 1000) {
+            return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'; // Format as thousands
+          } else {
+            return Math.floor(num); // Show integer value without decimal
+          }
+        }
+  
+        // Start the animation after the delay
+        setTimeout(() => {
+          updateCount();
+        }, delay);
+      });
+    }
+  })();
 
-  // Add click event listener to all buttons with class 'play-video'
-  document.querySelectorAll('.play-video').forEach(button => {
-    button.addEventListener('click', () => {
-      videoWrapper.classList.remove('invisible');
-      videoContainer.classList.remove('scale-0');
-      videoWrapper.classList.add('opacity-100');
-    });
-  });
+  // Sticky Navigation Bar
+  window.addEventListener('scroll', function () {
+    const nav = document.getElementById('sticky-navbar');
+    const navHeight = nav.offsetHeight;
 
-  // Add event listener to close the video modal when clicking outside of the video
-  videoWrapper.addEventListener('click', event => {
-    if (event.target === videoWrapper) {
-      videoWrapper.classList.add('invisible');
-      videoContainer.classList.add('scale-0');
+    if (window.scrollY > navHeight + 200) {
+      nav.classList.add('fixed_top');
+    } else if (window.scrollY < navHeight) {
+      nav.classList.remove('fixed_top');
     }
   });
-});
-
-    // Sticky Navigation Bar
-    window.addEventListener('scroll', function () {
-      const nav = document.getElementById('sticky-navbar');
-      const navHeight = nav.offsetHeight;
   
-      if (window.scrollY > navHeight + 200) {
-        nav.classList.add('fixed_top');
-      } else if (window.scrollY < navHeight) {
-        nav.classList.remove('fixed_top');
-      }
-    });
+
+  // video show popup
+  document.addEventListener('DOMContentLoaded', () => {
+    const videoWrapper = document.querySelector('.video-wrapper');
+    if (videoWrapper) {
+      const videoContainer = videoWrapper.querySelector('.video-container');
+  
+      document.querySelectorAll('.play-video').forEach(button => {
+        button.addEventListener('click', () => {
+          videoWrapper.classList.remove('invisible');
+          videoContainer.classList.remove('scale-0');
+          videoWrapper.classList.add('opacity-100');
+        });
+      });
+  
+      videoWrapper.addEventListener('click', event => {
+        if (event.target === videoWrapper) {
+          videoWrapper.classList.add('invisible');
+          videoContainer.classList.add('scale-0');
+        }
+      });
+    }
+  });
+  

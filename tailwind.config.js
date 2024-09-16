@@ -16,6 +16,7 @@ module.exports = {
       extend: {
         screens:{
           "2xl": "1320px",
+          '1280-1480': { 'min': '1280px', 'max': '1480px' },
         },
         colors:{
           primary: {
@@ -50,17 +51,17 @@ module.exports = {
           instractor_gradint: "linear-gradient(180deg, #FEF4F6 -2.01%, #E8EAF5 100%)",
           blog_overlay: "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 30.15%, rgba(12, 50, 27, 0.10) 57.77%, rgba(27, 17, 39, 0.40) 100%)",
           org_overlay: "linear-gradient(180deg, rgba(22, 22, 61, 0.00) 19.31%, rgba(22, 22, 61, 0.90) 100%)",
-          main_hero: "url(../images/hero/main-bg.png)",
-          counter_bg: "url(../images/hero/counter/counter-bg.png)",
-          offer_elemt: "url(../images/top-courses/offter-interset.png)",
-          cta_section: "url(../images/cta/cta-bg.png)",
-          join_section: "url(../images/join-us/join-bg.png)",
-          join_user_bg: "url(../images/join-us/user-bg.png)",
-          inner_hero: "url(../images/hero/inner-hero-bg.png)",
-          course_detail_hero: "url(../images/hero/course-detail-hero-bg.png)",
-          blog_quote: "url(../images/blog/blog-detail/quote-bg.png)",
-          org_card_bg: "url(../images/organization/organize-bg.png)",
-          org_detail_bg: "url(../images/organization/organize-detail-bg.png)",
+          main_hero: "url(../images/hero/main-bg.webp)",
+          counter_bg: "url(../images/hero/counter/counter-bg.webp)",
+          offer_elemt: "url(../images/top-courses/offter-interset.webp)",
+          cta_section: "url(../images/cta/cta-bg.webp)",
+          join_section: "url(../images/join-us/join-bg.webp)",
+          join_user_bg: "url(../images/join-us/user-bg.webp)",
+          inner_hero: "url(../images/hero/inner-hero-bg.webp)",
+          course_detail_hero: "url(../images/hero/course-detail-hero-bg.webp)",
+          blog_quote: "url(../images/blog/blog-detail/quote-bg.webp)",
+          org_card_bg: "url(../images/organization/organize-bg.webp)",
+          org_detail_bg: "url(../images/organization/organize-detail-bg.webp)",
         },
         backgroundSize:{
           "100%": "100% 100%",
@@ -71,7 +72,7 @@ module.exports = {
           "profile": "2px 6px 20px 0px rgba(13, 0, 65, 0.05)",
         }, 
         listStyleImage:{
-          white_tick: "url(../images/icon/tick_white.png)",
+          white_tick: "url(../images/icon/tick_white.webp)",
         },
         fontSize:{
           22: "22px",
@@ -97,10 +98,20 @@ module.exports = {
             '0%': { opacity: '0' },
             '100%': { opacity: '1' },
           },
+          shakeY: {
+            '0%, 100%': { transform: 'translateY(0px)' },
+            '50%': { transform: 'translateY(-16px)' },
+          },
+          shakeX: {
+            '0%, 100%': { transform: 'translateX(0px)' },
+            '50%': { transform: 'translateX(-16px)' },
+          },
         },
         animation:{
           spin: "spin 3s linear infinite",
           fade: 'fadeIn 0.5s ease-in-out',
+          shakeX: 'shakeX 6s ease-in-out infinite',
+          shakeY: 'shakeY 6s ease-in-out infinite',
         },
       },
     },

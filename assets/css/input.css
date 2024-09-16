@@ -81,7 +81,7 @@
         @apply inline-flex justify-center sm:py-3 py-2 sm:px-4 px-3 border border-white bg-primary-400 rounded-full text-sm leading-none;
     }
     .list-tick-circle{
-        @apply flex items-center gap-2.5 before:mt-1 before:content-[url('../../assets/images/icons/tick_white.png')] [&.list-primary]:before:content-[url('../../assets/images/icons/tick_primary.png')];
+        @apply flex items-center gap-2.5 before:mt-1 before:content-[url('../../assets/images/icons/tick_white.webp')] [&.list-primary]:before:content-[url('../../assets/images/icons/tick_primary.webp')];
     }
 
     /* counter */

@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  },
+  "name": "lms-hub-landing",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "start": "npx tailwindcss -i assets/css/input.css -o assets/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "CodexShaper",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LMS-HUB - Organization</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="web development agency">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/output.css">
+    <!-- CSS Vendor -->
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Top Notify -->
+    <div class="bg-primary py-3">
+        <div class="container sm:flex-between-center flex-center">
+            <div class="text-sm">
+                <ul class="flex items-center divide-x sm:last:*:block last:*:hidden text-white">
+                    <li>
+                        <a href="mailto:example@gmail.com" class="flex gap-2.5 lg:px-6 px-2.5 pl-0">
+                            <img src="assets/images/icons/mail.svg" alt="mail">
+                            example@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/0000000000" class="flex gap-2.5 lg:px-6 px-2.5 pr-0">
+                            <img src="assets/images/icons/phone.svg" alt="mail">
+                            Call: (123) 456 - 7892
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-white sm:flex hidden items-center leading-none">
+                <select class="bg-transparent focus:outline-none *:text-heading cursor-pointer select-none text-sm">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                </select>
+                <ul class="text-white flex items-center border-l border-opacity-30 border-white ml-5 divide-x divide-opacity-30 lg:*:px-5 *:px-2.5 last:*:pr-0 *:border-opacity-30 *:border-white">
+                    <li>
+                        <a href="#" class="hover:text-secondary-100 duration-200">
+                            <i class="ri-twitter-x-fill text-inherit"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-secondary-100 duration-200">
+                            <i class="ri-facebook-fill text-inherit"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-secondary-100 duration-200">
+                            <i class="ri-linkedin-fill text-inherit"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-secondary-100 duration-200">
+                            <i class="ri-instagram-line text-inherit"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <header class="relative sm:min-h-[104px] min-h-[90px] z-[9999]">
+        <nav id="sticky-navbar" class="font-splineSans py-6 px-4 w-full top-0 duration-200 ease-in-out z-50">
+            <div class="flex-between-center max-w-[1734px] mx-auto">
+                <!-- logo -->
+                <a href="index.html">
+                    <img src="assets/images/logo/logo-text.svg" alt="logo" class="sm:w-full w-3/4">
+                </a>
+                <!-- select and search -->
+                <div class="xl:block hidden">
+                    <div class="flex items-center gap-3">
+                        <div class="relative">
+                            <label class="font-remix pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2 text-2xl">
+                                <i class="ri-arrow-drop-down-line text-inherit"></i>
+                            </label>
+                            <select class="w-36 border focus:outline-none rounded-full cursor-pointer pl-4 pr-3 leading-5 py-3 appearance-none bg-transparent select-none">
+                                <option disabled selected>Categories</option>
+                                <option value="Web Developer">Developer</option>
+                                <option value="Digital Marketing">Marketing</option>
+                                <option value="Data Science">Design</option>
+                            </select>
+                        </div>
+                        <div class="relative">
+                            <!-- Search button -->
+                            <button onclick="toggleSearch()" class="w-12 h-12 rounded-full border hover:text-primary transition duration-200">
+                                <span id="searchIcon" class="block text-lg">
+                                    <i class="ri-search-line text-inherit"></i>
+                                </span>
+                                <span id="closeIcon" class="hidden text-lg">
+                                    <i class="ri-close-line text-inherit"></i>
+                                </span>
+                                <span class="sr-only">Search</span>
+                            </button>
+                            <!-- search input -->
+                            <form id="searchInput" class="absolute right-0 z-40 p-1 rounded-lg bg-white opacity-0 invisible -translate-y-5 transition-all duration-300">
+                                <input type="search" required placeholder="Search" class="placeholder-gray-400 border rounded-lg px-3 py-2.5 focus:outline-none">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- main nav menu -->
+                 <div class="lg:block hidden">
+                    <ul class="flex items-center text-lg *:px-4">
+                        <li>
+                            <a href="index.html" class="hover:text-primary duration-200">Home</a>
+                        </li>
+                        <li>
+                            <a href="courses.html" class="hover:text-primary duration-200">Courses</a>
+                        </li>
+                        <li class="dropdown-item group/dropdown">
+                            <a href="#">Pages
+                                <i class="ri-arrow-down-s-line text-inherit"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="course-detail.html" class="list-item hover:text-primary duration-200">Course Detail</a>
+                                </li>
+                                <li>
+                                    <a href="course-bundle.html" class="list-item hover:text-primary duration-200">Course Bundle</a>
+                                </li>
+                                <li>
+                                    <a href="course-video.html" class="list-item hover:text-primary duration-200">Course Video</a>
+                                </li>
+                                <li>
+                                    <a href="checkout.html" class="list-item hover:text-primary duration-200">Checkout</a>
+                                </li>
+                                <li>
+                                    <a href="instructor.html" class="list-item hover:text-primary duration-200">Instructor</a>
+                                </li>
+                                <li>
+                                    <a href="instructor-profile.html" class="list-item hover:text-primary duration-200">Instructor Profile</a>
+                                </li>
+                                <li>
+                                    <a href="organization.html" class="list-item hover:text-primary duration-200">Organization</a>
+                                </li>
+                                <li>
+                                    <a href="organization-detail.html" class="list-item hover:text-primary duration-200">Organization Detail</a>
+                                </li>
+                                <li>
+                                    <a href="blog-detail.html" class="list-item hover:text-primary duration-200">Blog Detail</a>
+                                </li>
+                                <li>
+                                    <a href="support.html" class="list-item hover:text-primary duration-200">Support</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="hover:text-primary duration-200">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="hover:text-primary duration-200">Contact</a>
+                        </li>
+                     </ul>
+                 </div>
+                 <!-- nav right -->
+                  <div class="flex items-center gap-5">
+                    <!-- cart -->
+                    <a href="cart.html" class="relative">
+                        <i class="ri-shopping-cart-2-line text-inherit text-xl"></i>
+                        <div class="absolute -top-1 -right-2 bg-secondary flex-center size-4 text-white text-xs rounded-full">0</div>
+                    </a>
+                    <span class="w-px h-30 bg-[#D0D2D4]"></span>
+                    <div class="sm:block hidden">
+                        <a href="#" class="flex items-center gap-2.5 text-lg font-medium hover:text-primary duration-200">
+                            <img src="assets/images/icons/login.png" alt="LMS-HUB" class="-mt-1">
+                            Log In
+                        </a>
+                    </div>
+                    <a href="#" class="btn btn-primary sm:block hidden">Join for Free!</a>
+                    <button onclick="toggleMobileNav()" class="text-2xl lg:hidden block">
+                        <i class="ri-menu-2-line text-inherit"></i>
+                    </button>
+                  </div>
+            </div>
+        </nav>
+    </header>
+    <!-- mobile menu -->
+    <div class="relative">
+        <!-- drawer -->
+        <div id="mobile-nav" class="fixed z-[99999] top-0 left-0 sm:w-3/6 w-5/6 h-screen -translate-x-[500px] bg-white flex flex-col duration-500 lg:hidden">
+            <!-- drawer top -->
+            <div class="flex-between-center p-3 shadow-sm">
+                <a href="index.html" class="w-3/6">
+                    <img src="assets/images/logo/logo-text.svg" alt="logo" class="w-full">
+                </a>
+                <button onclick="toggleMobileNav()" class="size-10 flex-center text-xl rounded-xl border hover:border-transparent hover:bg-primary hover:text-white duration-200">
+                    <i class="ri-close-line text-inherit"></i>
+                </button>
+            </div>
+            <!-- menus -->
+            <div class="px-3 mb-5 pt-5 overflow-y-auto">
+                <ul class="divide-y text-lg font-medium">
+                    <li>
+                        <a href="index.html" class="list-item py-2 px-3 hover:bg-primary-200 duration-200">Home</a>
+                    </li>
+                    <li>
+                        <a href="courses.html" class="list-item py-2 px-3 hover:bg-primary-200 duration-200">Courses</a>
+                    </li>
+                    <li class="sm-dropdown-item">
+                        <a href="#" class="list-item py-2 px-3 nav-drop-icon hover:bg-primary-200 duration-200">Pages</a>
+                        <ul class="navPanel panel px-5 text-base">
+                            <li>
+                                <a href="course-detail.html" class="py-1.5 list-item hover:text-primary duration-200">Course Detail</a>
+                            </li>
+                            <li>
+                                <a href="course-bundle.html" class="py-1.5 list-item hover:text-primary duration-200">Course Bundle</a>
+                            </li>
+                            <li>
+                                <a href="course-video.html" class="py-1.5 list-item hover:text-primary duration-200">Course Video</a>
+                            </li>
+                            <li>
+                                <a href="checkout.html" class="py-1.5 list-item hover:text-primary duration-200">Checkout</a>
+                            </li>
+                            <li>
+                                <a href="instructor.html" class="py-1.5 list-item hover:text-primary duration-200">Instructor</a>
+                            </li>
+                            <li>
+                                <a href="instructor-profile.html" class="py-1.5 list-item hover:text-primary duration-200">Instructor Profile</a>
+                            </li>
+                            <li>
+                                <a href="organization.html" class="py-1.5 list-item hover:text-primary duration-200">Course Organization</a>
+                            </li>
+                            <li>
+                                <a href="organization-detail.html" class="py-1.5 list-item hover:text-primary duration-200">Organization Detail</a>
+                            </li>
+                            <li>
+                                <a href="blog-detail.html" class="py-1.5 list-item hover:text-primary duration-200">Blog Detail</a>
+                            </li>
+                            <li>
+                                <a href="support.html" class="py-1.5 list-item hover:text-primary duration-200">Support</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="list-item py-2 px-3 hover:bg-primary-200 duration-200">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="list-item py-2 px-3 hover:bg-primary-200 duration-200">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- drawer footer -->
+            <div class="mt-auto p-3">
+                <div class="grid grid-cols-3 gap-2 mb-5">
+                    <div class="overflow-hidden rounded-md">
+                        <img src="assets/images/top-courses/image-1.png" alt="lms-hub" class="hover:scale-110 duration-200">
+                    </div>
+                    <div class="overflow-hidden rounded-md">
+                        <img src="assets/images/top-courses/image-2.png" alt="lms-hub" class="hover:scale-110 duration-200">
+                    </div>
+                    <div class="overflow-hidden rounded-md">
+                        <img src="assets/images/top-courses/image-3.png" alt="lms-hub" class="hover:scale-110 duration-200">
+                    </div>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Explore Our <span class="text-secondary">Courses</span></h3>
+                <p class="text-sm">Embark on a learning journey with our top-rated courses, designed to equip you with the skills you need to excel. Whether advance.</p>
+            </div>
+        </div>
+        <!-- overlay -->
+        <div onclick="toggleMobileNav()" id="mobile-nav-overlay" class="fixed z-[9999] top-0 w-full h-screen bg-black opacity-0 invisible duration-300 lg:hidden"></div>
+    </div>
+     <!-- start main -->
+    <main>
+        <!-- hero area -->
+        <div class="bg-inner_hero bg-100% bg-no-repeat font-splineSans xl:py-[160px] lg:py-24 sm:py-60 py-30">
+            <div class="flex-center flex-col">
+                <h2 class="lg:text-54 sm:text-4xl text-2xl text-secondary-100 font-semibold lg:leading-[76px]">Organization</h2>
+                <ul class="flex lg:text-lg font-medium font-publicSans lg:mt-0 sm:mt-3 mt-2">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="text-secondary-100">
+                        <i class="ri-arrow-right-s-line text-inherit ml-1.5"></i>
+                        <a href="organization.html">Organization</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Courses and Category -->
+        <div class="container pt-130 lg:pb-130 sm:pb-36 pb-36">
+            <div class="grid sm:grid-cols-12 gap-30 items-start">
+                <!-- filter & category -->
+                <div class="relative lg:col-span-4 col-span-6 card shadow-detail border border-gray-600 xl:p-[50px] p-6">
+                    <form class="card rounded-xl shadow-detail flex item-center gap-3.5 position-x-center -top-[42px] w-5/6 p-3">
+                        <input type="search" placeholder="Search Here..." class="w-full rounded-lg py-3 px-4 border border-gray-500 focus:outline-none focus:border-secondary-100">
+                        <button class="border px-4 rounded-lg">
+                            <i class="ri-equalizer-2-line text-inherit"></i>
+                        </button>
+                    </form>
+                    <!-- categories -->
+                    <div class="mt-8 divide-y sm:*:py-2.5 *:py-2 first:*:pt-0 last:*:pb-0">
+                        <!-- Category -->
+                        <div>
+                            <div class="accordion active category-accord">
+                                <span>Top Organization</span>
+                            </div>
+                            <ul class="accordionpanel *:py-2 first:*:pt-0">
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">WebMastery Pro</span>
+                                    </label>
+                                    <span>(132)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">DesignQuest</span>
+                                    </label>
+                                    <span>(24)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">LearnLoop</span>
+                                    </label>
+                                    <span>(260)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">TechSavvy School</span>
+                                    </label>
+                                    <span>(09)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">FutureCoders</span>
+                                    </label>
+                                    <span>(40)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">InnoLearn Hub</span>
+                                    </label>
+                                    <span>(128)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">MasterMinds Academy</span>
+                                    </label>
+                                    <span>(20)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- category Type -->
+                        <div>
+                            <div class="accordion active category-accord">
+                                <span>Type</span>
+                            </div>
+                            <ul class="accordionpanel *:py-2 first:*:pt-0">
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">Most Recent</span>
+                                    </label>
+                                    <span>(01)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">Top Ranked</span>
+                                    </label>
+                                    <span>(01)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">Largest</span>
+                                    </label>
+                                    <span>(01)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Organization Level -->
+                        <div>
+                            <div class="accordion active category-accord">
+                                <span>Instructor Level</span>
+                            </div>
+                            <ul class="accordionpanel *:py-2 first:*:pt-0">
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">Levels-1</span>
+                                    </label>
+                                    <span>(95)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">Level-2</span>
+                                    </label>
+                                    <span>(10)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">Level-3</span>
+                                    </label>
+                                    <span>(64)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Category language item -->
+                        <div>
+                            <div class="accordion active category-accord">
+                                <span>Language</span>
+                            </div>
+                            <ul class="accordionpanel *:py-2 first:*:pt-0">
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">English</span>
+                                    </label>
+                                    <span>(140)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">France</span>
+                                    </label>
+                                    <span>(10)</span>
+                                </li>
+                                <li class="flex-between-center leading-none">
+                                    <label class="select-none flex items-center cursor-pointer">
+                                        <input type="checkbox" class="size-3.5 mr-2.5 -mt-0.5">
+                                        <span class="hover:text-heading duration-200">Russian</span>
+                                    </label>
+                                    <span>(04)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- instructor -->
+                <div class="lg:col-span-8 col-span-6">
+                    <!-- grid & cols buttons -->
+                    <div class="flex-between-center lg:flex-row flex-col gap-5">
+                        <span class="lg:text-22 text-lg font-semibold line-clamp-1">Showing 1-06 of 24 Results</span>
+                        <div class="relative">
+                            <label class="font-remix pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2 text-2xl">
+                                <i class="ri-arrow-drop-down-line text-inherit"></i>
+                            </label>
+                            <select class="w-36 border focus:outline-none rounded-lg cursor-pointer pl-4 pr-3 leading-5 py-3 appearance-none bg-primary-800 select-none">
+                                <option disabled="" selected="">Categories</option>
+                                <option value="Web Developer">Developer</option>
+                                <option value="Digital Marketing">Marketing</option>
+                                <option value="Data Science">Design</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Organization -->
+                    <div class="lg:col-span-8 col-span-6 grid md:grid-cols-12 gap-30 mt-8">
+                        <!-- single item -->
+                        <div class="lg:col-span-6 col-span-full card shadow-profile overflow-hidden">
+                            <!-- card thumb -->
+                            <div class="bg-org_card_bg bg-no-repeat bg-100% relative z-10 after:absolute after:z-40 after:top-0 after:size-full after:bg-org_overlay w-full h-36"></div>
+                            <!-- card body -->
+                            <div class="text-center pb-8 -mt-12 sticky z-50">
+                                <a href="organization-detail.html" class="relative flex-center size-[84px] mx-auto rounded-full border-2 border-white bg-[#FA5F5F] mb-2">
+                                    <!-- main profile -->
+                                    <img src="assets/images/organization/org-1.png" alt="organization">
+                                    <!-- badge -->
+                                    <img src="assets/images/icons/verify.png" alt="verify" class="absolute z-20 bottom-1.5 right-0">
+                                </a>
+                                <a href="organization-detail.html">
+                                    <h3 class="xl:text-28 text-2xl font-semibold text-heading hover:text-primary duration-200 mb-1.5">Crafters Academy</h3>
+                                </a>
+                                <span class="font-medium">New York, America</span>
+                                <div class="flex justify-center text-center divide-x divide-gray-500 *:px-4 first:*:pl-0 last:*:pr-0 xl:mt-12 mt-4">
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">4.8</span>
+                                        <div class="flex items-center space-x-0.5  text-[#F4B718] leading-none">
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-half-fill text-inherit"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">20+</span>
+                                        <h6 class="text-sm">Courses</h6>
+                                    </div>
+                                    <div class="xl:block hidden">
+                                        <span class="text-lg font-semibold text-heading">10k+</span>
+                                        <h6 class="text-sm">Total Students</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item -->
+                        <div class="lg:col-span-6 col-span-full card shadow-profile overflow-hidden">
+                            <!-- card thumb -->
+                            <div class="bg-org_card_bg bg-no-repeat bg-100% relative z-10 after:absolute after:z-40 after:top-0 after:size-full after:bg-org_overlay w-full h-36"></div>
+                            <!-- card body -->
+                            <div class="text-center pb-8 -mt-12 sticky z-50">
+                                <a href="organization-detail.html" class="relative flex-center size-[84px] mx-auto rounded-full border-2 border-white bg-primary mb-2">
+                                    <!-- main profile -->
+                                    <img src="assets/images/organization/org-2.png" alt="organization">
+                                    <!-- badge -->
+                                    <img src="assets/images/icons/verify.png" alt="verify" class="absolute z-20 bottom-1.5 right-0">
+                                </a>
+                                <a href="organization-detail.html">
+                                    <h3 class="xl:text-28 text-2xl font-semibold text-heading hover:text-primary duration-200 mb-1.5">SkillForge</h3>
+                                </a>
+                                <span class="font-medium">New York, America</span>
+                                <div class="flex justify-center text-center divide-x divide-gray-500 *:px-4 first:*:pl-0 last:*:pr-0 xl:mt-12 mt-4">
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">4.8</span>
+                                        <div class="flex items-center space-x-0.5  text-[#F4B718] leading-none">
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-half-fill text-inherit"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">20+</span>
+                                        <h6 class="text-sm">Courses</h6>
+                                    </div>
+                                    <div class="xl:block hidden">
+                                        <span class="text-lg font-semibold text-heading">10k+</span>
+                                        <h6 class="text-sm">Total Students</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item -->
+                        <div class="lg:col-span-6 col-span-full card shadow-profile overflow-hidden">
+                            <!-- card thumb -->
+                            <div class="bg-org_card_bg bg-no-repeat bg-100% relative z-10 after:absolute after:z-40 after:top-0 after:size-full after:bg-org_overlay w-full h-36"></div>
+                            <!-- card body -->
+                            <div class="text-center pb-8 -mt-12 sticky z-50">
+                                <a href="organization-detail.html" class="relative flex-center size-[84px] mx-auto rounded-full border-2 border-white bg-primary mb-2">
+                                    <!-- main profile -->
+                                    <img src="assets/images/organization/org-3.png" alt="organization">
+                                    <!-- badge -->
+                                    <img src="assets/images/icons/verify.png" alt="verify" class="absolute z-20 bottom-1.5 right-0">
+                                </a>
+                                <a href="organization-detail.html">
+                                    <h3 class="xl:text-28 text-2xl font-semibold text-heading hover:text-primary duration-200 mb-1.5">WebMastery Pro</h3>
+                                </a>
+                                <span class="font-medium">New York, America</span>
+                                <div class="flex justify-center text-center divide-x divide-gray-500 *:px-4 first:*:pl-0 last:*:pr-0 xl:mt-12 mt-4">
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">4.8</span>
+                                        <div class="flex items-center space-x-0.5  text-[#F4B718] leading-none">
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-half-fill text-inherit"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">20+</span>
+                                        <h6 class="text-sm">Courses</h6>
+                                    </div>
+                                    <div class="xl:block hidden">
+                                        <span class="text-lg font-semibold text-heading">10k+</span>
+                                        <h6 class="text-sm">Total Students</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item -->
+                        <div class="lg:col-span-6 col-span-full card shadow-profile overflow-hidden">
+                            <!-- card thumb -->
+                            <div class="bg-org_card_bg bg-no-repeat bg-100% relative z-10 after:absolute after:z-40 after:top-0 after:size-full after:bg-org_overlay w-full h-36"></div>
+                            <!-- card body -->
+                            <div class="text-center pb-8 -mt-12 sticky z-50">
+                                <a href="organization-detail.html" class="relative flex-center size-[84px] mx-auto rounded-full border-2 border-white bg-[#F97316] mb-2">
+                                    <!-- main profile -->
+                                    <img src="assets/images/organization/org-4.png" alt="organization">
+                                    <!-- badge -->
+                                    <img src="assets/images/icons/verify.png" alt="verify" class="absolute z-20 bottom-1.5 right-0">
+                                </a>
+                                <a href="organization-detail.html">
+                                    <h3 class="xl:text-28 text-2xl font-semibold text-heading hover:text-primary duration-200 mb-1.5">DesignQuest</h3>
+                                </a>
+                                <span class="font-medium">New York, America</span>
+                                <div class="flex justify-center text-center divide-x divide-gray-500 *:px-4 first:*:pl-0 last:*:pr-0 xl:mt-12 mt-4">
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">4.8</span>
+                                        <div class="flex items-center space-x-0.5  text-[#F4B718] leading-none">
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-half-fill text-inherit"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">20+</span>
+                                        <h6 class="text-sm">Courses</h6>
+                                    </div>
+                                    <div class="xl:block hidden">
+                                        <span class="text-lg font-semibold text-heading">10k+</span>
+                                        <h6 class="text-sm">Total Students</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item -->
+                        <div class="lg:col-span-6 col-span-full card shadow-profile overflow-hidden">
+                            <!-- card thumb -->
+                            <div class="bg-org_card_bg bg-no-repeat bg-100% relative z-10 after:absolute after:z-40 after:top-0 after:size-full after:bg-org_overlay w-full h-36"></div>
+                            <!-- card body -->
+                            <div class="text-center pb-8 -mt-12 sticky z-50">
+                                <a href="organization-detail.html" class="relative flex-center size-[84px] mx-auto rounded-full border-2 border-white bg-[#F15757] mb-2">
+                                    <!-- main profile -->
+                                    <img src="assets/images/organization/org-5.png" alt="organization">
+                                    <!-- badge -->
+                                    <img src="assets/images/icons/verify.png" alt="verify" class="absolute z-20 bottom-1.5 right-0">
+                                </a>
+                                <a href="organization-detail.html">
+                                    <h3 class="xl:text-28 text-2xl font-semibold text-heading hover:text-primary duration-200 mb-1.5">LearnLoop</h3>
+                                </a>
+                                <span class="font-medium">New York, America</span>
+                                <div class="flex justify-center text-center divide-x divide-gray-500 *:px-4 first:*:pl-0 last:*:pr-0 xl:mt-12 mt-4">
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">4.8</span>
+                                        <div class="flex items-center space-x-0.5  text-[#F4B718] leading-none">
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-half-fill text-inherit"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">20+</span>
+                                        <h6 class="text-sm">Courses</h6>
+                                    </div>
+                                    <div class="xl:block hidden">
+                                        <span class="text-lg font-semibold text-heading">10k+</span>
+                                        <h6 class="text-sm">Total Students</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item -->
+                        <div class="lg:col-span-6 col-span-full card shadow-profile overflow-hidden">
+                            <!-- card thumb -->
+                            <div class="bg-org_card_bg bg-no-repeat bg-100% relative z-10 after:absolute after:z-40 after:top-0 after:size-full after:bg-org_overlay w-full h-36"></div>
+                            <!-- card body -->
+                            <div class="text-center pb-8 -mt-12 sticky z-50">
+                                <a href="organization-detail.html" class="relative flex-center size-[84px] mx-auto rounded-full border-2 border-white bg-[#17CF97] mb-2">
+                                    <!-- main profile -->
+                                    <img src="assets/images/organization/org-6.png" alt="organization">
+                                    <!-- badge -->
+                                    <img src="assets/images/icons/verify.png" alt="verify" class="absolute z-20 bottom-1.5 right-0">
+                                </a>
+                                <a href="organization-detail.html">
+                                    <h3 class="xl:text-28 text-2xl font-semibold text-heading hover:text-primary duration-200 mb-1.5">FutureCoders</h3>
+                                </a>
+                                <span class="font-medium">New York, America</span>
+                                <div class="flex justify-center text-center divide-x divide-gray-500 *:px-4 first:*:pl-0 last:*:pr-0 xl:mt-12 mt-4">
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">4.8</span>
+                                        <div class="flex items-center space-x-0.5  text-[#F4B718] leading-none">
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-fill text-inherit"></i>
+                                            <i class="ri-star-half-fill text-inherit"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-lg font-semibold text-heading">20+</span>
+                                        <h6 class="text-sm">Courses</h6>
+                                    </div>
+                                    <div class="xl:block hidden">
+                                        <span class="text-lg font-semibold text-heading">10k+</span>
+                                        <h6 class="text-sm">Total Students</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-between-center gap-30 mt-6">
+                        <span class="text-gray-800 sm:text-base text-sm line-clamp-1">Showing 1 to 12 of 24 entries</span>
+                        <div class="flex sm:gap-2.5 gap-1">
+                            <button class="pagi-btn">01</button>
+                            <button class="pagi-btn">02</button>
+                            <button class="pagi-btn">03</button>
+                            <button class="pagi-btn">
+                                <i class="ri-arrow-right-line text-inherit"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+     <!-- end main -->
+    <!-- footer -->
+    <footer>
+        <div class="relative z-20">
+            <!-- footer CTA -->
+            <div class="container">
+                <div class="rounded-3xl bg-primary grid sm:grid-cols-12 items-center xl:pl-28 lg:pl-20 sm:pl-8 pl-4 lg:pr-0 pr-4 lg:py-16 py-8 lg:-mb-130 sm:-mb-36 -mb-36 overflow-hidden sticky z-40">
+                    <div class="md:col-span-6 col-span-full mx-auto lg:text-32 sm:text-22 text-xl font-semibold lg:leading-10 sm:leading-9 leading-7 text-white xl:pr-28 md:mb-0 mb-4">
+                        Stay up-to-date on educational news with our newsletter Subscription
+                    </div>
+                    <div class="md:col-span-6 col-span-full">
+                        <form>
+                            <div class="relative bg-white rounded-full inline-block">
+                                <input type="email" placeholder="Enter Your Email" required class="w-full pl-30 sm:pr-40 pr-40 py-5 placeholder:text-gray-800 rounded-full focus:outline-none">
+                                <button type="submit" class="btn bg-secondary hover:bg-secondary hover:bg-opacity-90 hover:text-white hover:border-secondary gap-2 position-y-center right-2">
+                                    Subscribe
+                                    <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <p class="text-white mt-5 xl:pr-36 lg:pr-20">Subscribe to get the latest news on conversation design. By submitting this privacy policy.</p>
+                    </div>
+                    <!-- position item -->
+                    <img src="assets/images/footer/vector-left-top.png" alt="bag" class="absolute left-5 top-0 mix-blend-soft-light -z-10 sm:block hidden">
+                    <img src="assets/images/footer/vector-pen.png" alt="bag" class="absolute right-5 top-0 mix-blend-soft-light -z-10 lg:block hidden">
+                    <img src="assets/images/footer/vector-plane.png" alt="bag" class="absolute left-[35rem] bottom-0 mix-blend-soft-light -z-10">
+                    <img src="assets/images/footer/element-top.png" alt="bag" class="absolute left-[27rem] top-0 -z-10 lg:block hidden">
+                    <img src="assets/images/footer/vector-right-bottom.png" alt="bag" class="absolute right-0 bottom-0 -z-10 lg:block hidden">
+                </div>
+            </div>
+            <!-- footer body -->
+            <div class="bg-[#090927] lg:pt-64 pt-48 lg:pb-130 pb-24">
+                <div class="container sm:grid grid-cols-12 lg:gap-5 md:gap-10 sm:gap-5 sm:space-y-0 space-y-10">
+                    <div class="lg:col-span-3 sm:col-span-6 col-span-full">
+                        <img src="assets/images/logo/dark-logo.svg" alt="logo">
+                        <p class="text-gray-100 mt-6 mb-9 pr-20">Innovative, expert-led courses empower students with flexible learning.</p>
+                        <!-- social icons -->
+                        <ul class="flex items-center gap-1.5 text-gray-100">
+                            <li>
+                                <a href="#" class="size-[42px] bg-secondary-100 hover:text-white rounded-full flex-center duration-200">
+                                    <i class="ri-twitter-x-line text-inherit"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="size-[42px] bg-secondary-100 hover:text-white rounded-full flex-center duration-200">
+                                    <i class="ri-facebook-fill text-inherit"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="size-[42px] bg-secondary-100 hover:text-white rounded-full flex-center duration-200">
+                                    <i class="ri-linkedin-fill text-inherit"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="size-[42px] bg-secondary-100 hover:text-white rounded-full flex-center duration-200">
+                                    <i class="ri-instagram-fill text-inherit"></i>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-2 sm:col-span-3 col-span-full">
+                        <h5 class="text-xl font-semibold text-white mb-6">Useful links</h5>
+                        <ul class="text-gray-100 space-y-3">
+                            <li>
+                                <a href="index.html" class="hover:text-gray-200 duration-200">Home</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" class="hover:text-gray-200 duration-200">Courses</a>
+                            </li>
+                            <li>
+                                <a href="instructor.html" class="hover:text-gray-200 duration-200">Instructors</a>
+                            </li>
+                            <li>
+                                <a href="blog.html" class="hover:text-gray-200 duration-200">Blog</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="hover:text-gray-200 duration-200">Contact</a>
+                            </li>
+                            <li>
+                                <a href="support.html" class="hover:text-gray-200 duration-200">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-2 sm:col-span-3 col-span-full">
+                        <h5 class="text-xl font-semibold text-white mb-6">Our Company</h5>
+                        <ul class="text-gray-100 space-y-3">
+                            <li>
+                                <a href="#" class="hover:text-gray-200 duration-200">Become A Instructors</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-gray-200 duration-200">Refund Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-gray-200 duration-200">Trams & Condition</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" class="hover:text-gray-200 duration-200">Category Course</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-gray-200 duration-200">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-2 sm:col-span-6 col-span-full">
+                        <h5 class="text-xl font-semibold text-white mb-6">Get In Contact</h5>
+                        <ul class="text-gray-100 space-y-3">
+                            <li>
+                                <a href="https://wa.me/1234789" class="hover:text-gray-200 duration-200" target="_blank">(406) 123 4789</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@gamil.com" class="hover:text-gray-200 duration-200">info@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="https://maps.app.goo.gl/ujAaDxPhD2jHdAaG7" class="hover:text-gray-200 duration-200" target="_blank">2972 Westheimer Rd. Santa Ana, Illinois 85486 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="xl:col-start-11 lg:col-span-3 sm:col-span-6 col-span-full">
+                        <h5 class="text-xl font-semibold text-white mb-6">Download Apps</h5>
+                        <div class="space-y-3">
+                            <a href="#" class="before-icon-btn before:content-['\ea3f']">Apps Store</a>
+                            <a href="#" class="before-icon-btn strock before:content-['\edd6']">Apps Store</a>
+                            <div class="relative text-gray">
+                                <select class="rounded-10 px-4 py-3 ps-8 pt-3 text-[#D0D2D4] bg-transparent focus:outline-none cursor-pointer w-full">
+                                    <option value="english" selected>English (UK)</option>
+                                    <option value="bangli">Bangali</option>
+                                    <option value="arabic">Arabic</option>
+                                    <option value="hindi">Hindi</option>
+                                </select>
+                                <span class="absolute top-1/2 left-2 -translate-y-1/2 text-xl text-[#D0D2D4]">
+                                    <i class="ri-global-line text-inherit"></i>                         
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer bottom -->
+            <div class="bg-secondary-100 py-6">
+                <div class="container flex-between-center sm:text-start text-center md:flex-row flex-col md:gap-0 gap-4 text-sm">
+                    <div class="text-[#B8BCBF]">
+                        ©2024.All rights reserved by <span class="text-primary font-semibold">CodexShaper</span>
+                    </div>
+                    <ul class="flex sm:flex-row flex-col sm:gap-0 gap-2 text-[#D7D7D7] sm:divide-x divide-[#2B2B55] sm:*:px-4 first:*:pl-0 last:*:pr-0">
+                        <li>
+                            <a href="#" class="hover:text-primary duration-200">Terms of Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-primary duration-200">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-primary duration-200">Login & Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <!-- Script js -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

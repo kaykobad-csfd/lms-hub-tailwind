@@ -1,0 +1,188 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Spline+Sans:wght@300..700&display=swap');
+@import url('../../assets/fonts/icon-font/remix/remixicon.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        @apply font-publicSans text-gray scroll-smooth;
+    }
+}
+@layer components{
+    .flex-start{
+        @apply flex justify-start items-center;
+    }
+    .flex-center{
+        @apply flex justify-center items-center;
+    }
+    .flex-between-center{
+        @apply flex justify-between items-center;
+    }
+    .position-center{
+        @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform
+    }
+    .position-x-center{
+        @apply absolute left-1/2 -translate-x-1/2 transform
+    }
+    .position-y-center{
+        @apply absolute top-1/2 -translate-y-1/2 transform
+    }
+
+    .section-heading{
+        @apply text-heading xl:text-42 lg:text-4xl sm:text-3xl text-2xl font-bold xl:leading-[52px] lg:leading-[48px] leading-10 sm:mb-6 mb-3 font-publicSans;
+    }
+    .section-para{
+        @apply xl:text-lg font-splineSans;
+    }
+
+    /* nav */
+    .dropdown-item{
+        @apply hover:text-primary duration-200 relative;
+    }
+    .dropdown-menu{
+        @apply text-base text-gray *:px-4 *:py-2 absolute z-40 bg-white border-l-4 border-primary w-[200px] shadow-lg mt-2 rounded-md divide-y -translate-y-3 group-hover/dropdown:translate-y-0 invisible group-hover/dropdown:visible opacity-0 group-hover/dropdown:opacity-100 duration-500;
+    }
+    .nav-drop-icon{
+        @apply relative before:position-y-center before:right-0 before:font-remix before:content-['\ea4e'];
+    }
+    .navPanel{
+        @apply max-h-0 overflow-hidden transition-all duration-300;
+    }
+
+    /* buttons and badges */
+    .btn{
+        @apply inline-flex font-medium font-splineSans px-6 py-4 rounded-full leading-none bg-primary [&.strock]:bg-transparent [&.strock]:hover:bg-primary hover:bg-transparent text-white [&.strock]:text-primary [&.strock]:hover:text-white hover:text-primary border border-transparent [&.strock]:border-primary hover:border-primary duration-300;
+    }
+    .before-icon-btn{
+        @apply before:font-remix before:text-2xl flex items-center justify-center gap-2 text-lg font-medium font-splineSans bg-secondary-100 [&.strock]:bg-transparent [&.strock]:hover:bg-primary hover:bg-primary rounded-10 text-white px-6 py-3 [&.strock]:border [&.strock]:border-[#2B2B55] duration-200;
+    }
+    .tab-btn{
+        @apply [&.active]:bg-primary [&.active]:text-white [&.active]:border-transparent text-[#717880] hover:text-white px-4 py-2.5 rounded-full border border-[#D0D2D4] hover:border-transparent hover:bg-primary leading-none flex-center items-center gap-2 duration-200;
+    }
+    .slide-btn{
+        @apply sm:size-16 size-12 bg-white [&.swiper-button-disabled]:!bg-gray-300 hover:bg-primary-900 hover:text-secondary-100 [&.swiper-button-disabled]:text-white rounded-full absolute xl:top-1/2 transform xl:-translate-y-1/2 z-30 xl:bottom-auto sm:-bottom-4 -bottom-2.5 text-2xl duration-200;
+    }
+    .pagi-btn {
+        @apply md:size-9 size-8 flex-center text-center text-gray-800 font-medium rounded-md border hover:border-transparent border-gray-500 bg-primary-800 hover:bg-primary hover:text-white duration-200;
+    }
+    .course-info-tab{
+        @apply font-semibold bg-primary-200 hover:bg-primary hover:text-white  [&.active]:bg-primary [&.active]:text-white px-6 py-3 rounded-lg duration-200;
+    }
+    .badge{
+        @apply inline-flex px-3 py-2 leading-none rounded-full bg-primary text-white text-xs;
+    }
+    .badge-strock-md{
+        @apply inline-flex justify-center px-3 py-2 border leading-none rounded-md text-heading;
+    }
+    .badge-keyword{
+        @apply inline-flex justify-center sm:py-3 py-2 sm:px-4 px-3 border border-white bg-primary-400 rounded-full text-sm leading-none;
+    }
+    .list-tick-circle{
+        @apply flex items-center gap-2.5 before:mt-1 before:content-[url('../../assets/images/icons/tick_white.png')] [&.list-primary]:before:content-[url('../../assets/images/icons/tick_primary.png')];
+    }
+
+    /* counter */
+    .counter-wrap{
+        @apply text-gray-200 xl:text-lg lg:text-base text-sm leading-none;
+    }
+    .counter-digit{
+        @apply xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-bold text-white lg:mb-3 sm:mb-2 mb-1;
+    }
+
+    .card{
+        @apply rounded-20 bg-white;
+    }
+    .insturctor-card{
+        @apply lg:col-span-4 sm:col-span-6 col-span-full card p-6 pb-60 relative;
+    }
+    .team-thumb-bg{
+        @apply bg-[#EFF1FE] group-hover/instructor:bg-[#D9DDFE] rounded-2xl relative duration-200 overflow-hidden;
+    }
+    .team-title{
+        @apply xl:text-22 text-lg font-semibold text-white hover:text-primary-200 duration-200 leading-none line-clamp-1 xl:mb-1;
+    }
+    .social-wrap{
+        @apply flex flex-col gap-2 absolute top-5 right-5 text-[#717880] translate-x-20 group-hover/instructor:-translate-x-0 duration-300;
+    }
+    .social-item{
+        @apply size-[42px] bg-white hover:bg-primary hover:text-white rounded-full flex-center duration-200;
+    }
+
+    /* blog  */
+    .blog-thumb{
+        @apply overflow-hidden rounded-t-20 relative z-10 after:absolute after:z-50 after:top-0 after:w-full after:h-full after:bg-blog_overlay;
+    }
+    .blog-title{
+        @apply mt-4 xl:text-22 text-lg font-semibold text-heading xl:leading-8 line-clamp-2 hover:text-primary duration-200;
+    }
+    /* Course  */
+    .course-title{
+        @apply text-heading xl:text-22 lg:text-lg text-xl font-semibold line-clamp-2 hover:text-primary duration-200;
+    }
+
+     /* accordion */
+    .accordion-faq{
+        @apply relative before:size-2 before:bg-primary before:rounded-full before:position-y-center before:left-0 after:content-['\ea11'] after:position-y-center after:right-0 after:font-remix pl-5 xl:text-xl text-lg text-heading cursor-pointer xl:py-4 py-2.5 [&.active]:after:content-['\ee57'] [&.active]:after:rotate-180 [&.active]:after:text-primary select-none after:duration-200;
+    }
+    .category-accord{
+        @apply [&.active]:mb-4 flex-between-center after:content-['\ea54'] after:font-remix after:text-3xl after:font-normal xl:text-xl text-lg text-heading cursor-pointer [&.active]:after:rotate-90 font-semibold duration-300;
+    }
+    /* course */
+    .accordion{
+        @apply relative cursor-pointer select-none after:duration-200;
+    }
+    .accordionpanel{
+        @apply overflow-hidden max-h-0 duration-200 ease-in-out;
+    }
+    .course-over-accord{
+        @apply flex-between-center relative before:position-y-center before:font-remix before:content-['\f008'] before:text-gray-800 [&.active]:before:text-primary before:text-opacity-60 before:text-3xl before:rounded-full px-6 py-5 [&.active]:border-b [&.active]:rounded-b-lg before:duration-300 duration-200;
+    }
+    .course-accord-item{
+        @apply flex-between-center pl-60 pr-6 relative before:position-y-center before:font-remix before:text-xl before:content-['\ed0f'] leading-none;
+    }
+    .course-video-accord{
+        @apply relative before:absolute before:top-2 before:font-remix before:content-['\eece'] [&.active]:before:text-primary before:text-xl [&.active]:before:content-['\eed2'] before:rounded-full px-3 py-3 after:absolute after:right-2.5 after:top-2.5 after:content-['\ea4e'] after:font-remix after:text-xl [&.active]:border-b [&.active]:bg-primary-800 before:duration-300 duration-200;
+    }
+    .video-accord-item{
+        @apply flex-between-center pl-3 pr-3 relative before:position-y-center before:font-remix before:text-xl before:content-['\f008'] [&.active]:before:content-['\efd5'] before:text-gray-800 [&.active]:before:text-primary [&.active]:text-primary leading-none;
+    }
+    .course-item-view{
+        @apply bg-[#DFE3FE] flex-center gap-2 rounded-full before:content-['\ecb4'] before:font-remix text-primary px-3 py-2;
+    }
+    .video-asign{
+        @apply border border-gray-200 rounded-lg py-4 xl:px-6 px-4 md:flex-between-center md:text-start text-center relative before:position-y-center md:before:content-['\ed0f'] before:font-remix before:text-xl;
+    }
+    .help-faq-accord{
+        @apply pt-4 sm:px-8 px-4 line-clamp-1 [&.active]:after:rotate-180 after:absolute after:right-3 after:leading-none after:content-['\ea4e'] after:font-remix after:text-3xl after:text-gray-800 before:duration-300 duration-200;
+    }
+
+    .rate-input {
+        @apply -ms-4 size-5 bg-transparent border-0 text-transparent cursor-pointer disabled:cursor-default disabled:!border-0 appearance-none checked:!bg-none focus:bg-none focus:ring-0 focus:ring-offset-0;
+    }
+    .rate-label {
+        @apply text-[#E6E6E6] pointer-events-none before:font-remix before:content-['\f186'] text-xl duration-200;
+    }
+    .readonly-rate {
+        @apply text-lg before:font-remix before:content-['\f186'] text-[#ECBC38] [&.no-rate]:text-[#E6E6E6];
+    }
+
+    .input-default{
+        @apply border border-gray-200 placeholder:text-gray-100 focus:outline-none focus:border-secondary-100 rounded-lg py-3 px-5 w-full mt-2;
+    }
+
+}
+@layer utilities{
+    .fixed_top {
+        position: fixed !important;
+        background-color: #fff;
+        box-shadow: 4px -2px 25px #11111129;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+}

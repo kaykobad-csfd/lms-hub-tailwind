@@ -93,8 +93,15 @@ module.exports = {
           10: "10px",
           20: "20px",
         },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
+        },
         animation:{
           spin: "spin 3s linear infinite",
+          fade: 'fadeIn 0.5s ease-in-out',
         },
       },
     },

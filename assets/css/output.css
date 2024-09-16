@@ -14011,6 +14011,10 @@ html{
   width: 3rem;
 }
 
+.w-14{
+  width: 3.5rem;
+}
+
 .w-2\/4{
   width: 50%;
 }
@@ -14069,6 +14073,10 @@ html{
 
 .w-\[250px\]{
   width: 250px;
+}
+
+.w-\[300px\]{
+  width: 300px;
 }
 
 .w-full{
@@ -14772,6 +14780,10 @@ html{
 
 .p-1{
   padding: 0.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .p-2\.5{

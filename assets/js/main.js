@@ -8,18 +8,28 @@
     document.getElementById('loader').style.display = 'none';
     document.getElementById('content').style.display = 'block';
   }
-  /* toggle search */
-  var searchIcon = document.getElementById('searchIcon');
-  var closeIcon = document.getElementById('closeIcon');
-  var searchInput = document.getElementById('searchInput');
-  
-  function toggleSearch() {
+ /* toggle search */
+var searchIcon = document.getElementById('searchIcon');
+var closeIcon = document.getElementById('closeIcon');
+var searchInput = document.getElementById('searchInput');
+
+function toggleSearch() {
+    // Toggle the search visibility
     searchIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
     searchInput.classList.toggle('opacity-0');
     searchInput.classList.toggle('invisible');
     searchInput.classList.toggle('translate-y-5');
-  }
+}
+
+// Function to hide search if clicked outside
+window.addEventListener('click', function (e) {
+    if (!searchInput.contains(e.target) && !e.target.closest('button')) {
+        if (!searchInput.classList.contains('opacity-0')) {
+            toggleSearch(); // Hide the search input if it's open
+        }
+    }
+});
   // course grid
   const gridBtn = document.querySelector('.grid-btn');
   const colBtn = document.querySelector('.col-btn');

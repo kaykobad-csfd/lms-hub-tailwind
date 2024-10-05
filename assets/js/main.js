@@ -254,3 +254,22 @@ window.addEventListener('click', function (e) {
       nav.classList.remove('fixed_top');
     }
   });
+
+
+  // Get references to the elements
+const passwordField = document.getElementById('Password');
+const showPasswordBtn = document.getElementById('showPassword');
+const hidePasswordBtn = document.getElementById('hidePassword');
+
+// Toggle password visibility
+showPasswordBtn.addEventListener('click', function () {
+    passwordField.type = 'text';
+    showPasswordBtn.classList.add('hidden');
+    hidePasswordBtn.classList.remove('hidden');
+});
+
+hidePasswordBtn.addEventListener('click', function () {
+    passwordField.type = 'password';
+    hidePasswordBtn.classList.add('hidden');
+    showPasswordBtn.classList.remove('hidden');
+});

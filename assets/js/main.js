@@ -255,7 +255,6 @@ window.addEventListener('click', function (e) {
     }
   });
 
-
   // Get references to the elements
 const passwordField = document.getElementById('Password');
 const showPasswordBtn = document.getElementById('showPassword');
@@ -273,3 +272,23 @@ hidePasswordBtn.addEventListener('click', function () {
     hidePasswordBtn.classList.add('hidden');
     showPasswordBtn.classList.remove('hidden');
 });
+
+// move next
+function getInputElement(index) {
+  return document.getElementById("step" + index + "-field");
+}
+function moveToNext(index, event) {
+  const eventCode = event.which || event.keyCode;
+
+  const input = getInputElement(index);
+  if (input.value.length === 1) {
+    if (index !== 4) {
+      getInputElement(index + 1).focus();
+    } else {
+      input.blur();
+    }
+  }
+  if (eventCode === 8 && index !== 1) {
+    getInputElement(index - 1).focus();
+  }
+}

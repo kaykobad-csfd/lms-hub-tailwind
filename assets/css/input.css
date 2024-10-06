@@ -144,16 +144,16 @@
         @apply flex-between-center sm:pl-60 pl-5 sm:pr-6 pr-3 leading-none;
     }
     .course-video-accord{
-        @apply relative before:absolute before:top-2 before:font-remix before:content-['\eece'] [&.active]:before:text-primary before:text-xl [&.active]:before:content-['\eed2'] before:rounded-full px-3 py-3 after:absolute after:right-2.5 after:top-2.5 after:content-['\ea4e'] after:font-remix after:text-xl [&.active]:border-b [&.active]:bg-primary-800 before:duration-300 duration-200;
+        @apply px-3 py-3 after:absolute after:right-2.5 after:top-2.5 after:content-['\ea4e'] after:font-remix after:text-xl [&.active]:border-b [&.active]:bg-primary-800 duration-200;
     }
     .video-accord-item{
-        @apply flex-between-center pl-3 pr-3 relative before:position-y-center before:font-remix before:text-xl before:content-['\f008'] [&.active]:before:content-['\efd5'] before:text-gray-800 [&.active]:before:text-primary [&.active]:text-primary leading-none;
+        @apply flex-between-center pl-3 pr-3 [&.active]:text-primary leading-none;
     }
     .course-item-view{
         @apply bg-[#DFE3FE] flex-center gap-2 rounded-full text-primary px-3 py-2;
     }
     .video-asign{
-        @apply border border-gray-200 rounded-lg py-4 xl:px-6 px-4 md:flex-between-center md:text-start text-center relative before:position-y-center md:before:content-['\ed0f'] before:font-remix before:text-xl;
+        @apply border border-gray-200 rounded-lg py-4 xl:px-6 px-4 md:flex-between-center md:text-start text-center;
     }
     .help-faq-accord{
         @apply pt-4 sm:px-8 px-4 line-clamp-1 [&.active]:after:rotate-180 after:absolute after:right-3 after:leading-none after:content-['\ea4e'] after:font-remix after:text-3xl after:text-gray-800 before:duration-300 duration-200;
